@@ -9,6 +9,7 @@ import {BrowserRouter as Router,Link,Navlink} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Logout from './components/logout.js';
 import Admin from './components/admin.js';
+import Register from './components/register.js';
 import './App.css';
 
 class App extends React.Component{
@@ -23,6 +24,7 @@ class App extends React.Component{
           <Route path ="/login" exact strict component={Login}/>
           <Route path ="/logout"exact strict component={Logout}/>
           <Route path="/admin" exact strict component={Admin}/>
+          <Route path="/register" exact strict component={Register}/>
           <Footer/>      
     </div>
     </Router>

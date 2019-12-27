@@ -25,6 +25,10 @@ class Header extends React.Component{
                        {color:'white'}
 
                    }>Login</NavLink></li>
+                   
+                   <li><NavLink to ='/register' exact activeStyle={
+                       {color:'white'}
+                   }>Register</NavLink></li>
                 </ul>
             </nav>
         )

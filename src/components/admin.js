@@ -25,8 +25,10 @@ class Admin extends React.Component{
         return(
 
          <div>
+              <h1>Hii I am an Admin</h1>
              <h1>Hii I am an Admin</h1>
              <Link to="/logout">Logout</Link>
+             <h1>Hii I am an Admin</h1>
 
         </div>
         )

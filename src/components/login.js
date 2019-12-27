@@ -1,6 +1,7 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import Admin from './admin';
+import {login} from './Userfunction.js';
 class Login extends React.Component{
     constructor(props){
         super(props)
@@ -20,13 +21,16 @@ class Login extends React.Component{
     }
     submitForm(e){
         e.preventDefault()
-        const {username,password}=this.state  
-        if(username==="A"&&password==="A"){
-            localStorage.setItem("token","vikash35");
-            this.setState({
-                loggedIn:true
-            })
-        } 
+        const user = {
+            email: this.state.email,
+            password: this.state.password
+          }
+      
+          login(user).then(res => {
+            if (res) {
+              this.props.history.push(`/home`)
+            }
+          })
      }
 
     render(){
